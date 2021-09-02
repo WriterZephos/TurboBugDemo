@@ -1,0 +1,19 @@
+<%= turbo_frame_tag "test_model_form" do %>
+    <div id="test_model_form_div">
+        <%= form_with(url: "", data: {turbo_frame: "new_test_model"}) do |form| %>
+            
+            <div class="field">
+                <%= form.label :name %>
+                <%= form.text_field :name %>
+            </div>
+
+
+            <input type="button"
+                    name="cancel" 
+                    value="Cancel"
+                    data-action="click->html-loader#remove" 
+                    data-html-loader-target-id="test_model_form_div">
+            <%= form.submit %>
+        <% end %>
+    </div>
+<% end %>

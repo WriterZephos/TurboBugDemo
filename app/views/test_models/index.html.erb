@@ -1,0 +1,6 @@
+<h1>TestModels#index</h1>
+ 
+<%= turbo_frame_tag "new_test_model" do %>
+  <%= link_to "New", "new", data: { turbo_frame: "test_model_form"} %>
+  <%= turbo_frame_tag "test_model_form" %>
+<% end %>
